@@ -17,9 +17,3 @@ const Header = props => (
 );
 
 export default Header
-
-// git remote add origin git@github.com:z-david/catch-of-the-day.git
-// git config --global user.name "z-david"
-// git config --global user.email ddwible@gmail.com
-// ssh -T z-david@github.com
-// git pull https://github.com/z-david/catch-of-the-day.git
