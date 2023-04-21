@@ -1,6 +1,6 @@
 import React from "react";
 
-// stateless functional component
+// stateless functional component just returns a function
 const Header = props => (  
     <header className="top">
         <h1>Catch 
