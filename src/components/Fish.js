@@ -2,10 +2,6 @@ import React from "react";
 import {formatPrice} from '../helpers';
 
 class Fish extends React.Component {
-    handleAddToOrderClick = (index) => {
-        this.props.addToOrder(index);
-    }
-
 	render() {
         const {image, name, price, desc, status} = this.props.details;
         const isAvailable = status === "available";
