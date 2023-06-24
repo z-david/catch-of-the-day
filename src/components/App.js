@@ -5,14 +5,21 @@ import Inventory from "./Inventory";
 import Fish from './Fish';
 
 import sampleFishes from '../sample-fishes'
+import base from "../base";
 
 class App extends React.Component {
-  constructor(){
-    super();
-  }
+  
   state = {
     fishes: {},
     order: {}
+  }
+  componentDidMount() {
+    const { params } = this.props.match
+    //console.log('MOUNTED!!');
+    this.ref = base.syncState(`${params.storeId}/fishes`, {
+      context: this,
+      state: "fishes"
+    });
   }
 
   addToOrder = (key) => {
@@ -55,6 +62,10 @@ class App extends React.Component {
       </div>
     );
   }
+
+  componentWillUnmount(
+    // unsubscribe
+  ){}
 }
 
 export default App;
